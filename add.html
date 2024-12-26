@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Section</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: burlywood;
+}
+
+.blog-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color:rgb(235, 217, 193);
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.blog-posts {
+    margin-top: 20px;
+}
+
+.blog-post {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #007BFF;
+    border-radius: 4px;
+}
+
+.blog-post h2 {
+    color: #007BFF;
+}
+
+.blog-post p {
+    color: #555;
+}
+
+.add-post {
+    margin-top: 30px;
+}
+
+.add-post h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+#postContent{
+    width: 100%;
+    padding: 100px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+
+}
+
+
+    </style>
+   
+</head>
+<body>
+
+<div class="blog-container">
+    <h1>My Blog</h1>
+
+    <div class="blog-posts" id="blogPosts">
+        <!-- Blog posts will be added here dynamically -->
+    </div>
+<form action="blog.php" method="POST">
+    <div class="add-post">
+        <h2>Add a New Post</h2>
+        <input type="text" id="postTitle" name="title" placeholder="Post Title">
+        <textarea id="postContent" name="blog" placeholder="Write your post content here..."></textarea>
+        <button onclick="addPost()">Add Post</button>
+    </div>
+    </form>
+</div>
+
+<script src="add.js"></script>
+</body>
+</html>
